@@ -48,7 +48,8 @@ And it call the check function with parameter of user input.
   - I use [cyberchef](http://icyberchef.com) to decode the strings.![Alt Text](img/decode.png)Search xor in cyberchef and enter the key (we know the strings are deccode with the value of 8 in the program ).Enter the encode value ("Z;~Mz[;W9{W<\WIz\") in input field and the output is R3vErS3_1s_4_ArT. So finally we got the secret key.
 
 - Check the output is correct or wrong 
-  - Run the binary and enter the decoded output.![Alt Text](img/flag.png) Hey we give the flag :smiley:
+  - Run the binary and enter the decoded output.![Alt Text](img/flag.png) 
+  - Hey we got the flag :smiley:
 	
 
  
