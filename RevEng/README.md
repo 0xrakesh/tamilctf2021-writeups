@@ -19,7 +19,7 @@ Its a 64 bit binary ,Dynamically linked and not stripped.
 - Run the Program:
   - ./RevEng
   ![Alt Text](img/run_bin.png)
-  - Ohh, the output is the ** secret key is wrong **
+  - Ohh, the output is the secret key is wrong.
 
 ## Analysis the binary with binary ninja
 - Open the Binary in [Binary Ninja](https://binary.ninja/demo/).
