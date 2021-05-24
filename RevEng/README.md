@@ -6,7 +6,7 @@ We need to find the flag in the form of TamilCTF{FLAG}.The challenge file is in 
 We can try some static analysis on reveng binary to get some basic information without run the program.
 
 - Try **file** command:
-  - file reveng
+  - file RevEng
 ![Alt Text](img/file.png)
 Its a 64 bit binary ,Dynamically linked and not stripped.
 
@@ -33,7 +33,7 @@ And it call the check function with parameter of user input.
 ![Alt Text](img/check.png)
 - The First Loop:
   - First it compare to 0xf(it is hexa of 15).The iteration start with 0 and end with 15, So the length of strings is 16.
-![Alt Text](img/first loop.png)	
+![Alt Text](img/first_loop.png)	
 	
 
 	
