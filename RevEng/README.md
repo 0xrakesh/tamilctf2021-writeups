@@ -28,7 +28,7 @@ And it call the check function with parameter of user input.
 
 - Examine the check function:
 
-  - The check function contain two loops.The first loop compare something, its equal then iterate otherwise it exit the program.After the first loop, it goes to second loop and it look like generate the Flag.
+  - The check function contain two loops.The first loop compare something, if its false,then it will exit the program.The second loop look like generate the Flag.
 (GOAL : FIND THE VALUES IN COMPARE STATEMENT)
 ![Alt Text](img/check.png)
 - The First Loop:
