@@ -21,6 +21,7 @@ Its a 64 bit binary ,Dynamically linked and not stripped.
   ![Alt Text](img/run_bin.png)
   - Ohh, the output is the ** secret key is wrong **
 
+## Analysis the binary with binary ninja
 - Open the Binary in [Binary Ninja](https://binary.ninja/demo/).
   - /opt/binaryninja/binaryninja reveng
 ![Alt Text](img/binaryopen.png)
