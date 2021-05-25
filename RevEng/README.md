@@ -38,7 +38,8 @@ And it call the check function with parameter of user input.
 (GOAL : FIND THE VALUES IN COMPARE STATEMENT)
 ![Alt Text](img/check.png)
 - The First Loop:
-  - First it compare the **rbp-0x4{l_one}** ( the value of rbp-0x4{l_one} is 0 ) to 0xf **(it is hexa of 15)**.The iteration start with **0** and end with **15**, So the length of strings is **16**.![Alt Text](img/first_loop.png).The mov instruction move the iteration number to eax.Then load the data_40207c address **( Actually "Z;~Mz[;W9{W<\WIz\" strings stored in data_40207c )** into rdx. The single byte of rax (iteration value) + rdx (strings) moved into eax. Like if iteration is 0, the first value of strings is moved into eax. Then the value of eax is xor with 8 ,it stored in rbp-0x10{var_18_1}. So Finally it will compare to user input. **If the result of the comparsion is false ,it will exit the program.**
+  - First it compare the **rbp-0x4{l_one}** ( the value of rbp-0x4{l_one} is 0 ) to 0xf **(it is hexa of 15)**.The iteration start with **0** and end with **15**, So the length of strings is **16**.![Alt Text](img/first_loop.png).
+The mov instruction move the iteration number to eax.Then load the data_40207c address **( Actually "Z;~Mz[;W9{W<\WIz\" strings stored in data_40207c )** into rdx. The single byte of rax (iteration value) + rdx (strings) moved into eax. Like if iteration is 0, the first value of strings is moved into eax. Then the value of eax is xor with 8 ,it stored in rbp-0x10{var_18_1}. So Finally it will compare to user input. **If the result of the comparsion is false ,it will exit the program.**
 
 - The Second Loop:
   - It look like just generate a flag,then it will the program.It generate the flag as see in the first loop .It just xor the strings and produce the flag.
