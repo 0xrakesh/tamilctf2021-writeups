@@ -10,9 +10,9 @@
 
 ## Open the binary on Ghidra
   - Ghidra is decompiler,it can decompile the object code and give the c code.
-    - /opt/ghidra_9.2.3.PUBLIC/ghidraRun<br /> ![Alt Text](img/ghidra_open.png)<br />It
+    - /opt/ghidra_9.2.3.PUBLIC/ghidraRun<br /> ![Alt Text](img/ghidra_open.png)<br />
   - Examine the main function
-    - It print some strings ,ask the user input and the user input is compared to 0x539(It is hex of 1337).So We **find the ID successfully.**<br /> ![Alt Text](img/main.png)<br />But it ask another user input (password) and it pass user input to pwd function.<br />
+    - It print some strings ,then it wait for user input **( ID )** and the user input is compared to 0x539 **(It is hex of 1337)** .So We **find the ID successfully.**<br /> ![Alt Text](img/main.png)<br />But it ask another user input (password) and it pass user input to pwd function.<br />
 
   - Examine the pwd function
     - In pwd function, there are many stuff doing here. But I quickly note that In first while loop,decrease 5 char in stored string.<br />![Alt Text](img/pwd.png)<br />So i decided to find the strings stored local_78,70 and 62. The value of packed in hexa value.So i unpacked the hexadecimal value by using struct module in python.<br />![Alt Text](img/decode.png)<br />.Look the first while loop <br /> ![Alt Text](img/pwd_check.png).So the every single byte of strings **( ~5zdfWjdjQnYjdM9hp8w )** is decrease by 5 times.Then it decode strings is compare to user input,if false the program will **exit**.
