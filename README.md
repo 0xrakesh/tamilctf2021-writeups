@@ -1,7 +1,7 @@
 # TamilCTF 2021
 - Our Team planned to conduct a captue the flag game.
-- We successfully hosted TamilCTF 2021.
-![Alt Text](img/webiste.png)<br />
+- We successfully hosted TamilCTF 2021.<br />
+![Alt Text](https://github.com/Cyber-Hackz/tamilctf2021-writeups/edit/main/img/webiste.png)<br />
 - The [TamilCTF 2021](https://exploiteverythingtamil.github.io/index.html) Website is stilled alive, you can go to see and download the [challenges](https://exploiteverythingtamil.github.io/challenges.html). 
 - Our Teams 
   - [Monish Kumar](https://github.com/AidenPearce369/) - Admin.
