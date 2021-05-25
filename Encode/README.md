@@ -34,8 +34,8 @@
 ## Got the flag
   - Run the encode binary.
     > ./Encode 
-  - It know that id is 1337 and password is **y0u_aRe_eLiTe_H4ck3r**<br />![Alt Text](img/flag.png)<br /> 
-  - So finally , we got the flag :smiley:<br />
+  - It know that id is **1337** and password is **y0u_aRe_eLiTe_H4ck3r**<br />![Alt Text](img/flag.png)<br /> 
+  - So finally , we got the flag **TamilCTF{i_luv_reverse_engineering}** :smiley:<br />
 
 
 
