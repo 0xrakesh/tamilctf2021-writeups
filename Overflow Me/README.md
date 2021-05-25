@@ -41,7 +41,7 @@
     - Hey, Now the breakpoint is hit.
     - List the value in rbp.
       - x/20wx $rbp![Alt Text](img/rbp.png)<br />
-      - The value of 42 **(B)** is stored in rbp adn 43 **(C)** is stored in return address.
+      - The value of 42 **(B)** is stored in rbp and 43 **(C)** is stored in return address.
 
 ## Make a Exploit
   - We need overwrite the vuln function address on return address
