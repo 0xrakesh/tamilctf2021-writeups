@@ -42,11 +42,10 @@ And it call the check function with parameter of user input.
 The mov instruction move the iteration number to eax.Then load the data_40207c address **( Actually "Z;~Mz[;W9{W<\WIz\" strings stored in data_40207c )** into rdx. The single byte of rax (iteration value) + rdx (strings) moved into eax. Like if iteration is 0, the first value of strings is moved into eax. Then the value of eax is xor with 8 ,it stored in rbp-0x10{var_18_1}. So Finally it will compare to user input. **If the result of the comparsion is false ,it will exit the program.**
 
 - The Second Loop:
-  - It look like just generate a flag,then it will the program.It generate the flag as see in the first loop .It just xor the strings and produce the flag.
-![Alt Text](img/second_loop.png)
+  - The second loop look like just generate a flag,then it will exit the program.It generate the flag as see in the first loop ,it just xor the strings![Alt Text](img/second_loop.png), produce the flag and exit the program.
 
 - Find the Secret Key by using [CyberChef](http://icyberchef.com/)
-  - I use [cyberchef](http://icyberchef.com) to decode the strings.![Alt Text](img/decode.png)Search xor in cyberchef and enter the key (we know the strings are deccode with the value of 8 in the program ).Enter the encode value ("Z;~Mz[;W9{W<\WIz\") in input field and the output is R3vErS3_1s_4_ArT. So finally we got the secret key.
+  - I use [cyberchef](http://icyberchef.com) to decode the strings.![Alt Text](img/decode.png)Search xor in cyberchef and enter the key **(we know the strings are deccode with the value of 8 in the program )**. Enter the encoded value **("Z;~Mz[;W9{W<WIz\")** in input field and the produced output is **R3vErS3_1s_4_ArT**. So finally we got the **secret key**.
 
 - Check the output is correct or wrong 
   - Run the binary and enter the decoded output.**(R3vErS3_1s_4_ArT)**![Alt Text](img/flag.png) 
