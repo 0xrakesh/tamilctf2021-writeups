@@ -15,7 +15,7 @@
   - /opt/binaryninja/binaryninja Overflow_Me
 ![Alt Text](img/open_binary.png)<br />
   - Examine the main function
-    - The main function call the **banner** function. Actually the banner function print the some strings. Then get a user input by using gets function **( Gets is dangerous function,there is no limits for the user input, So we overflow the return address )**. ![Alt Text](img/main.png)<br />But there is one cmp instruction ,it compare the eax **( the eax is 0)** with 0x33313337 **( It is hexa of 7313 )**.If compare statement is false ,it will **exit** the program by print the **Addr of eax**.  
+    - The main function call the **banner** function. Actually the banner function print the some strings. Then get a user input by using gets function **( Gets is dangerous function,there is no limits for the user input, So we overflow the return address )**. ![Alt Text](img/main.png)<br />But there is one cmp instruction ,it compare the eax **( the eax is 0)** with 0x33313337 **( It is hexa of 7313 )**.If compare statement is false ,it will **exit** the program by print the **Addr of eax**.  <br /> **GOAL : OVERWRITE 7313 VALUE ON EAX**.
     
 ## Find the offset of eax
   - Create a unique pattern
