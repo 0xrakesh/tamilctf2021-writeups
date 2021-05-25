@@ -5,17 +5,17 @@
   - Do some basic analysis on the encode binary.
     - file Encode![Alt Text](img/file.png)<br />It is 64 bit, x86-64 and not stripped binary.
     - strings Encode ![Alt Text](img/strings.png)<br />Nothing is interesting like Flag.
-  - Run the binary and analysi the functionality
+  - Run the binary and analysis the functionality
     - ./Encode<br />![Alt Text](img/run_bin.png)<br />It asking the id ,just enter anything.The output is **The ID is Wrong.**
 
 ## Open the binary on Ghidra
   - Ghidra is decompiler,it can decompile the object code and give the c code.
     - /opt/ghidra_9.2.3.PUBLIC/ghidraRun<br /> ![Alt Text](img/ghidra_open.png)<br />
   - Examine the main function
-    - It print some strings ,then it wait for user input **( ID )** and the user input is compared to 0x539 **(It is hex of 1337)** .So We **find the ID successfully.**<br /> ![Alt Text](img/main.png)<br />But it ask another user input (password) and it pass user input to pwd function.<br /> After that it call the entry2 function...
+    - It print some strings ,then it wait for user input **( ID )** and the user input is compared to 0x539 **(It is hex of 1337)** .So We **find the ID successfully.**<br /> ![Alt Text](img/main.png)<br />But it ask another user input (password) and it passed the user input to pwd function.<br /> After that it call the entry2 function...
 
   - Examine the pwd function
-    - In pwd function, there are many stuff doing here. But I quickly note that In first while loop,decrease 5 char in stored string.<br />![Alt Text](img/pwd.png)<br />So i decided to find the strings stored in local_78,70 and 62. The value of packed in hexa value.So i unpacked the hexadecimal value by using struct module in python.<br />![Alt Text](img/decode.png)<br />Look the first while loop <br /> ![Alt Text](img/pwd_check.png)<br />.So the every single byte of strings **( ~5zdfWjdjQnYjdM9hp8w )** is decrease by 5 times.Then it decode strings is compare to user input,if false the program will **exit** ,<br /> otherwise it return to main function..
+    - In pwd function, there are many stuff doing here. But I quickly note that In first while loop,decrease 5 char in stored string.<br />![Alt Text](img/pwd.png)<br />So i decided to find the strings stored in local_78,70 and 62. The value are in hexa format.So i just unpacked the hexadecimal value by using struct module in python.<br />![Alt Text](img/decode.png)<br />Look the first while loop <br /> ![Alt Text](img/pwd_check.png)<br />.So the every single byte of strings **( ~5zdfWjdjQnYjdM9hp8w )** is decrease by 5 times.Then it decode strings is compare to user input,if false the program will **exit** ,<br /> otherwise it return to main function..
   - Examine the entry2 function
     - The entry2 function look like print the flag<br />![Alt Text](img/entry.png)<br />
 
